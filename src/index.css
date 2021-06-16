@@ -769,3 +769,7 @@ aside {
   cursor: pointer;
   transition: 0.3s all linear;
 }
+
+.active-pledge-modal {
+  border: 2px solid var(--cyan);
+}

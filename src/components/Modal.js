@@ -19,6 +19,19 @@ function Modal({
     }
   };
 
+  const styles = (index, item) => {
+    if (item.left < 1) {
+      return "reward-modal out-of-stock";
+    } else if (item === checked) {
+      return "reward-modal active-pledge-modal";
+    }
+    return "reward-modal";
+  };
+
+  // {`${
+  //   item.left === 0 ? "reward-modal out-of-stock" : "reward-modal"
+  // }`}
+
   return (
     <section
       className={`${showModal ? "modal show-modal" : "modal"}`}
@@ -35,11 +48,7 @@ function Modal({
       <div className="modal-container">
         {data.map((item, index) => {
           return (
-            <article
-              className={`${
-                item.left === 0 ? "reward-modal out-of-stock" : "reward-modal"
-              }`}
-            >
+            <article className={styles(item, index)}>
               <div className="reward-modal-main-content">
                 <div className="reward-modal-top">
                   <div className="reward-modal-header">
@@ -60,7 +69,7 @@ function Modal({
                   <p>{item.content}</p>
                 </div>
                 <div className="reward-modal-bottom">
-                  {item.left && (
+                  {item.left > 0 && (
                     <h3>
                       {item.left} <span>left</span>
                     </h3>
