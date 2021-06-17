@@ -424,16 +424,17 @@ nav img:not(.toggle) {
   background: white;
   width: 90vw;
   margin: 0 auto;
-  left: 115%;
+  left: 5%;
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   padding: 1.5rem;
-  display: grid;
+  display: none;
   z-index: 999;
 }
 
 .show-modal {
   left: 5%;
+  display: grid;
 }
 
 .modal-header {
@@ -631,12 +632,14 @@ input[type="number"] {
 @media screen and (min-width: 768px) {
   .modal {
     width: 50vw;
-    left: 115%;
+    left: 25%;
     top: 25vh;
+    display: none;
   }
 
   .show-modal {
     left: 25%;
+    display: grid;
   }
 
   .reward-modal-main-content {

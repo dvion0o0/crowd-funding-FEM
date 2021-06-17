@@ -65,7 +65,7 @@ function App() {
         setChecked={setChecked}
       />
       <PledgeModal pledgeModal={pledgeModal} setPledgeModal={setPledgeModal} />
-      <div className={`${showModal || (pledgeModal && "modal-active")}`}>
+      <div className={`${pledgeModal || showModal ? "modal-active" : null}`}>
         <Header
           openModal={openModal}
           showModal={showModal}

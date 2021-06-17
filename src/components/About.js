@@ -41,7 +41,7 @@ function About({ openModal, showModal, statData }) {
                     }`}
                     onClick={openModal}
                   >
-                    {item.button}
+                    <a href="#modal">{item.button}</a>
                   </button>
                 </div>
               </article>
